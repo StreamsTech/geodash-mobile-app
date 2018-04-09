@@ -17,7 +17,7 @@ export class MyApp {
   rootPage: any = HomePage;
   // rootPage:any = MapsPage;
 
-  pages: Array<{ title: string, component: any, icon: any }>;
+  pages: Array<{ title: string, component: any, icon: any, isActive: boolean }>;
 
   constructor(public platform: Platform,
     public statusBar: StatusBar,
@@ -28,11 +28,11 @@ export class MyApp {
 
   private menuInitialization() {
     this.pages = [
-      { title: 'Home', component: HomePage, icon: "assets/icon/favicon.ico"},
-      { title: 'Notifications', component: NotificationsPage, icon: "assets/icon/favicon.ico" },
-      { title: 'Errors', component: ErrorsPage, icon: "assets/icon/favicon.ico" },
-      { title: 'Maps', component: MapsPage, icon: "assets/icon/favicon.ico" },
-      { title: 'Logout', component: LogoutPage, icon: "assets/icon/favicon.ico" },
+      { title: 'Home', component: HomePage, icon: "assets/icon/favicon.ico", isActive: true},
+      { title: 'Notifications', component: NotificationsPage, icon: "assets/icon/favicon.ico", isActive: false },
+      { title: 'Errors', component: ErrorsPage, icon: "assets/icon/favicon.ico", isActive: false },
+      { title: 'Maps', component: MapsPage, icon: "assets/icon/favicon.ico", isActive: false },
+      { title: 'Logout', component: LogoutPage, icon: "assets/icon/favicon.ico", isActive: false },
     ];
   }
 
@@ -45,7 +45,8 @@ export class MyApp {
   }
 
   openPage(page) {
-
+    this.pages.forEach(p=>p.isActive=false);
+    page.isActive=true;
     this.nav.setRoot(page.component);
   }
 }
