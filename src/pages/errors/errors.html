@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Errors</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding overflow-scroll="true">
+  <ion-list [virtualScroll]="errors">
+
+    <ion-item *virtualItem="let item">
+      <div full (click)="gotoItemDetailsPage(item)">
+        <h2>{{item.msg}}</h2>
+        <span class="time">{{item.create_datetime}}</span>
+      </div>
+    </ion-item>
+
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite())">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

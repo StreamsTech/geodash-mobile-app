@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Notifications</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding overflow-scroll="true">
+    <div *ngIf="notifications.length==0">
+      No notifications available
+    </div>
+    <ion-list [virtualScroll]="notifications">
+      <ion-item *virtualItem="let item">
+        <div class="item-note">
+          <h2>{{item.abstract}}</h2>
+          <span class="time">{{item.date_created}}</span>
+          <div>
+            <ion-col col-6>
+              <button small ion-button (click)="approveNotfication(item)">Approve</button>
+            </ion-col>
+            <ion-col col-6 end>
+                <button small color="danger" ion-button (click)="denyNotfication(item)">Deny</button>
+            </ion-col>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite($event))" enabled="false">
+      <ion-infinite-scroll-content ></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>
