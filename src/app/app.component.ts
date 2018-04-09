@@ -17,7 +17,7 @@ export class MyApp {
   rootPage: any = HomePage;
   // rootPage:any = MapsPage;
 
-  pages: Array<{ title: string, component: any }>;
+  pages: Array<{ title: string, component: any, icon: any }>;
 
   constructor(public platform: Platform,
     public statusBar: StatusBar,
@@ -28,11 +28,11 @@ export class MyApp {
 
   private menuInitialization() {
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Notifications', component: NotificationsPage },
-      { title: 'Errors', component: ErrorsPage },
-      { title: 'Maps', component: MapsPage },
-      { title: 'Logout', component: LogoutPage },
+      { title: 'Home', component: HomePage, icon: "assets/icon/favicon.ico"},
+      { title: 'Notifications', component: NotificationsPage, icon: "assets/icon/favicon.ico" },
+      { title: 'Errors', component: ErrorsPage, icon: "assets/icon/favicon.ico" },
+      { title: 'Maps', component: MapsPage, icon: "assets/icon/favicon.ico" },
+      { title: 'Logout', component: LogoutPage, icon: "assets/icon/favicon.ico" },
     ];
   }
 
