@@ -2,4 +2,60 @@ page-login {
     .error ion-label {
         color: red !important;
     }
+    ion-header {
+        display: none;
+    }
+    .login-container
+    {
+        width: 60%;
+        margin: 0 auto;
+    }
+    ion-content {
+        background-image: url(../assets/imgs/bodyBackImg.jpg);       
+    }
+
+
+// body{
+//  background-image: url("/assets/imgs/bodyBackImg.jpg");   
+//  background: #000;
+// }
+    ion-content.login{
+//        background: rgba(140,199,255,1);
+// background: -moz-radial-gradient(center, ellipse cover, rgba(140,199,255,1) 0%, rgba(56,149,226,1) 100%);
+// background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(140,199,255,1)), color-stop(100%, rgba(56,149,226,1)));
+// background: -webkit-radial-gradient(center, ellipse cover, rgba(140,199,255,1) 0%, rgba(56,149,226,1) 100%);
+// background: -o-radial-gradient(center, ellipse cover, rgba(140,199,255,1) 0%, rgba(56,149,226,1) 100%);
+// background: -ms-radial-gradient(center, ellipse cover, rgba(140,199,255,1) 0%, rgba(56,149,226,1) 100%);
+// background: radial-gradient(ellipse at center, rgba(140,199,255,1) 0%, rgba(56,149,226,1) 100%);
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8cc7ff', endColorstr='#3895e2', GradientType=1 );
+// background-image: url("assets/imgs/bodyBackImg.jpg");
+        }
+        .item-md
+        {
+            background: transparent;
+            padding: 0;
+        }
+        .item-md.item-block .item-inner
+        {
+            padding-right: 0;
+        }
+        ion-input, ion-textarea
+        {
+            background-color: #fff;
+        }
+        .item-input .label-md, .item-select .label-md, .item-datetime .label-md
+        {
+            color: #000;
+        }
+        .item-md.item-block .item-inner
+        {
+            border-bottom: none;
+            
+        }
+        .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner
+        {
+            box-shadow: none;
+        }
+       
+  
 }

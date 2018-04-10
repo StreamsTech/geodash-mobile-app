@@ -13,9 +13,10 @@
 </ion-header>
 
 
-<ion-content padding>
-  <form (ngSubmit)="login()">
+<ion-content class="login" padding>
+  <form (ngSubmit)="login()" class="login-container">
     <div class="{{failedLoginClass}}">
+     <div style="width: "> <img src="assets/imgs/geodash.png" /></div>
       <ion-item>
         <ion-label floating>Username</ion-label>
         <ion-input type="text" [(ngModel)]="loginDetails.username" name="username"></ion-input>
