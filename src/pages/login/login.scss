@@ -1,4 +1,7 @@
 page-login {
+    body{
+        background-color:#2b99ce ;
+    }
     .error ion-label {
         color: red !important;
     }
@@ -11,51 +14,43 @@ page-login {
         margin: 0 auto;
     }
     ion-content {
-        background-image: url(../assets/imgs/bodyBackImg.jpg);       
+        // background-image: url(../assets/imgs/bodyBackImg.jpg);  
+   
     }
 
-
-// body{
-//  background-image: url("/assets/imgs/bodyBackImg.jpg");   
-//  background: #000;
-// }
-    ion-content.login{
-//        background: rgba(140,199,255,1);
-// background: -moz-radial-gradient(center, ellipse cover, rgba(140,199,255,1) 0%, rgba(56,149,226,1) 100%);
-// background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(140,199,255,1)), color-stop(100%, rgba(56,149,226,1)));
-// background: -webkit-radial-gradient(center, ellipse cover, rgba(140,199,255,1) 0%, rgba(56,149,226,1) 100%);
-// background: -o-radial-gradient(center, ellipse cover, rgba(140,199,255,1) 0%, rgba(56,149,226,1) 100%);
-// background: -ms-radial-gradient(center, ellipse cover, rgba(140,199,255,1) 0%, rgba(56,149,226,1) 100%);
-// background: radial-gradient(ellipse at center, rgba(140,199,255,1) 0%, rgba(56,149,226,1) 100%);
-// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8cc7ff', endColorstr='#3895e2', GradientType=1 );
-// background-image: url("assets/imgs/bodyBackImg.jpg");
-        }
-        .item-md
-        {
-            background: transparent;
-            padding: 0;
-        }
-        .item-md.item-block .item-inner
-        {
-            padding-right: 0;
-        }
-        ion-input, ion-textarea
-        {
-            background-color: #fff;
-        }
-        .item-input .label-md, .item-select .label-md, .item-datetime .label-md
-        {
-            color: #000;
-        }
-        .item-md.item-block .item-inner
-        {
-            border-bottom: none;
-            
-        }
-        .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner
-        {
-            box-shadow: none;
-        }
-       
+.content-md
+{
+    background-color: #2b99ce;   
+}
+.item-md
+{
+    background: transparent;
+    padding-left: 0;
+}
+.item-input .label-md, .item-select .label-md, .item-datetime .label-md
+{
+    color: #fff;
+}
+.item .item-block .item-md .item-input .item-label-floating .input-has-value .item-input-has-value
+{
+    color: #a3f2ff;
+}
+.item-md.item-input.item-input-has-focus .item-inner,
+.item-md.item-input.input-has-focus .item-inner {
+  border-bottom-color: #3fb1e5;
+  -webkit-box-shadow: inset 0 -1px 0 0 #3fb1e5;
+  box-shadow: inset 0 -1px 0 0 #3fb1e5;
+}
+.item-input-has-focus .label-md[stacked],
+.input-has-focus .label-md[stacked],
+.item-input-has-focus .label-md[floating],
+.input-has-focus .label-md[floating] {
+  color: #ffff51;
+}
+.item-label-stacked .text-input-md, .item-label-floating .text-input-md
+{
+    color: #fff;
+}
+  
   
 }

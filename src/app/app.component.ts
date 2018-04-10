@@ -7,6 +7,7 @@ import { NotificationsPage } from '../pages/notifications/notifications';
 import { ErrorsPage } from '../pages/errors/errors';
 import { LogoutPage } from '../pages/logout/logout';
 import { MapsPage } from '../pages/maps/maps';
+import { LoginPage } from "../pages/login/login";
 
 @Component({
   templateUrl: 'app.html'
@@ -14,7 +15,12 @@ import { MapsPage } from '../pages/maps/maps';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = LoginPage;
+  // rootPage: any = HomePage;
+  // rootPage: any = ErrorsPage;
+  // rootPage: any = NotificationsPage;
+  
+
   // rootPage:any = MapsPage;
 
   pages: Array<{ title: string, component: any, icon: any, isActive: boolean }>;

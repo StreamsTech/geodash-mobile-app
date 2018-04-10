@@ -32,15 +32,17 @@ export class LoginPage {
       content: 'Loading...'
     });
     loading.present();
-    this.loginService.Login(this.loginDetails).then((data) => {
-      loading.dismiss();
-      if (data) {
-        this.navCtrl.setRoot(HomePage);
-        return;
-      } else {
-        this.loginFailed();
-      }
-    });
+    this.navCtrl.setRoot(HomePage);
+    loading.dismiss();
+    // this.loginService.Login(this.loginDetails).then((data) => {
+    //   loading.dismiss();
+    //   if (data) {
+    //     this.navCtrl.setRoot(HomePage);
+    //     return;
+    //   } else {
+    //     this.loginFailed();
+    //   }
+    // });
 
   }
 

@@ -14,9 +14,16 @@
 
 
 <ion-content class="login" padding>
+
+  <div style="text-align: center"> 
+    <div class="logo"><img src="assets/imgs/geodash.png" /></div>
+    <h1 style="color: #fff;margin-top:0">GEODASH.GOV.BD</h1>
+    <p style="color: #a3f2ff">AN OPEN SOURCE GEOSPATIAL DATA MANAGEMENT & VISUALIZATION PLATFORM</p>
+</div>
+
   <form (ngSubmit)="login()" class="login-container">
     <div class="{{failedLoginClass}}">
-     <div style="width: "> <img src="assets/imgs/geodash.png" /></div>
+     
       <ion-item>
         <ion-label floating>Username</ion-label>
         <ion-input type="text" [(ngModel)]="loginDetails.username" name="username"></ion-input>
@@ -27,6 +34,6 @@
       </ion-item>
     </div>
 
-    <button ion-button type="submit" block>Login</button>
+    <button ion-button color="light" type="submit" block style="margin-top: 15px;">Login</button>
   </form>
 </ion-content>
