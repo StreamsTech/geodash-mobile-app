@@ -1,0 +1,23 @@
+page-document {
+
+       .list-md ion-item-sliding {
+        border-bottom: 1px solid #ccc;
+    }
+    .list-md .item-block .item-inner {
+        border: none;
+    }
+    .list-header-md {
+        margin-bottom: 0;
+    }
+    .note-md {
+        font-size: 11px;
+        color: #1ab394;
+    }
+    .item-md [item-end] {
+        margin: -45px 0 0 0;
+    }
+    .item-md p a {
+        color: #7f7f7f;
+    }
+
+}

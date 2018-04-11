@@ -40,7 +40,7 @@ export class MyApp {
       { title: 'Notifications', component: NotificationsPage, icon: "notifications", isActive: false },
       { title: 'Errors', component: ErrorsPage, icon: "alert", isActive: false },
       { title: 'Maps', component: MapsPage, icon: "map", isActive: false },
-      { title: 'Approve', component: ApprovePage, icon: "checkmark-circle", isActive: false },
+      { title: 'Approval Request', component: ApprovePage, icon: "checkmark-circle", isActive: false },
       { title: 'Logout', component: LogoutPage, icon: "log-out", isActive: false },
     ];
   }

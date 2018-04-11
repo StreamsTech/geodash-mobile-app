@@ -23,6 +23,9 @@ import { MapsPage } from '../pages/maps/maps';
 import { MapsnativePage } from '../pages/mapsnative/mapsnative';
 import { MapwithgooglePage } from '../pages/mapwithgoogle/mapwithgoogle';
 import { ApprovePage } from "../pages/approve/approve";
+import { LayerPage } from "../pages/layer/layer";
+import { MapPage } from "../pages/map/map";
+import { DocumentPage } from "../pages/document/document";
 
 
 @NgModule({
@@ -37,7 +40,10 @@ import { ApprovePage } from "../pages/approve/approve";
     MapsPage,
     MapsnativePage,
     MapwithgooglePage,
-    ApprovePage
+    ApprovePage,
+    MapPage,
+    LayerPage,
+    DocumentPage
   ],
   imports: [
     BrowserModule,
@@ -58,7 +64,10 @@ import { ApprovePage } from "../pages/approve/approve";
     MapsPage,
     MapsnativePage,
     MapwithgooglePage,
-    ApprovePage
+    ApprovePage,
+    MapPage,
+    LayerPage,
+    DocumentPage
     
   ],
   providers: [

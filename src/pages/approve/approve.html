@@ -3,14 +3,18 @@
     <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-    <ion-title>Approve</ion-title>
+    <ion-title>Approval Request</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 
-<ion-content padding>
+<ion-content>
+<ion-tabs>
+      <ion-tab tabTitle="Layers" tabIcon="ios-browsers-outline" [root]="layerPage" tabBadge="3" tabBadgeStyle="danger"></ion-tab>
+      <ion-tab tabTitle="Maps" tabIcon="ios-map-outline" [root]="mapPage" tabBadge="3" tabBadgeStyle="danger"></ion-tab>
+      <ion-tab tabTitle="Document" tabIcon="ios-document-outline" [root]="documentPage" tabBadge="14" tabBadgeStyle="danger"></ion-tab>
+    </ion-tabs>
 
-  sdfsd
 
 </ion-content>

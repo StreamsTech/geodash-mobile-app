@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { ApprovePage } from './approve';
+import { DocumentPage } from './document';
 
 @NgModule({
   declarations: [
-    ApprovePage,
+    DocumentPage,
   ],
   imports: [
-    IonicPageModule.forChild(ApprovePage),
+    IonicPageModule.forChild(DocumentPage),
   ],
 })
-export class ApprovePageModule {}
+export class DocumentPageModule {}
