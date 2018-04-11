@@ -1,1 +1,12 @@
-page-errors {}
+page-errors {
+    .time {
+        font-size: small;
+        color: #8a99a5;
+    }
+    .item-md {
+        padding-left: 0;
+    }
+    .item-md.item-block .item-inner {
+        padding-right: 0;
+    }
+}

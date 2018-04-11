@@ -12,7 +12,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
     private loginService: LoginService) {
-    this.checkAuthentication();
+    // this.checkAuthentication();
 
   }
   private checkAuthentication() {

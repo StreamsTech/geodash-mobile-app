@@ -8,10 +8,35 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-item padding-top="20">
-    <h2>You have
+
+<ion-card class="card card-ios">
+
+ 
+<!--
+  <ion-card-content>
+     <h2>You have
       <span class="item_count notification">10</span> new notifications
       <br/>
       <span class="item_count error">5</span> new errors</h2>
-  </ion-item>
+  </ion-card-content>-->
+
+
+   <ion-list>
+    <button ion-item>
+      <ion-icon name="notifications" item-start style="color: #05ace2;"></ion-icon>
+     10 new notifications
+    </button>
+
+    <button ion-item>
+      <ion-icon name="alert" item-start style="color: #f78b00;"></ion-icon>
+      5 new errors
+    </button>
+
+    
+
+  </ion-list>
+
+</ion-card>
+
+
 </ion-content>

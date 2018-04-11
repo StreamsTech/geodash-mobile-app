@@ -1,33 +1,132 @@
 <ion-header>
-    <ion-navbar>
-      <button ion-button menuToggle>
+  <ion-navbar>
+    <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-      <ion-title>Notifications</ion-title>
-    </ion-navbar>
-  </ion-header>
+    <ion-title>Notifications</ion-title>
+  </ion-navbar>
+</ion-header>
 
 <ion-content padding overflow-scroll="true">
-    <div *ngIf="notifications.length==0">
-      No notifications available
-    </div>
-    <ion-list [virtualScroll]="notifications">
-      <ion-item *virtualItem="let item">
-        <div class="item-note">
-          <h2>{{item.abstract}}</h2>
-          <span class="time">{{item.date_created}}</span>
-          <div>
-            <ion-col col-6>
-              <button small ion-button (click)="approveNotfication(item)">Approve</button>
-            </ion-col>
-            <ion-col col-6 end>
-                <button small color="danger" ion-button (click)="denyNotfication(item)">Deny</button>
-            </ion-col>
-          </div>
-        </div>
-      </ion-item>
-    </ion-list>
-    <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite($event))" enabled="false">
-      <ion-infinite-scroll-content ></ion-infinite-scroll-content>
-    </ion-infinite-scroll>
+  <div *ngIf="notifications.length==0">
+    No notifications available
+  </div>
+  <!--<ion-list [virtualScroll]="notifications">
+    <ion-item *virtualItem="let item">
+
+      <h2>{{item.abstract}}</h2>
+      <p class="time">{{item.date_created}}</p>
+      <button ion-button color="secondary" outline item-end (click)="approveNotfication(item)">Approve</button>
+      <button ion-button color="danger" style="margin-right: 0" outline item-end ion-button (click)="denyNotfication(item)">Deny</button>
+      
+
+    </ion-item>
+  </ion-list>-->
+
+
+  <ion-list>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/avatar-han.png" />
+      </ion-avatar>
+      <h2><a href="">Tauhid</a></h2>
+      <h3>Pushed a new map for approval on</h3>
+      <p><a href="">Dhaka BOundary - 2</a></p>
+      <ion-note item-end>
+        3 weeks, 6 days ago
+      </ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/avatar-han.png" />
+      </ion-avatar>
+      <h2><a href="">Akash</a></h2>
+      <h3>Created map using your layer on</h3>
+      <p><a href="">Cyclone Shelters in Ukhia, Teknaf and Ramu under Cox's Bazar District by shafiul.parvez</a></p>
+      <ion-note item-end>
+        2 weeks, 3 days ago
+      </ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/avatar-han.png" />
+      </ion-avatar>
+      <h2><a href="">Mizan</a></h2>
+      <h3>Pushed a new layer for approval on</h3>
+      <p><a href="">Toilets in Ershadnagar Bastuhara Slum </a></p>
+      <ion-note item-end>
+        2 weeks, 5 days ago
+      </ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/avatar-han.png" />
+      </ion-avatar>
+      <h2><a href="">Maeenul Islam</a></h2>
+      <h3>Approved your map on</h3>
+      <p><a href="">Office point Dhaka Division by superadmin </a></p>
+      <ion-note item-end>
+        2 weeks, 3 days ago
+      </ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/avatar-han.png" />
+      </ion-avatar>
+      <h2><a href="">Zaman</a></h2>
+      <h3>Requested to join Bangladesh Forest Department on</h3>
+      <p><a href="">Bangladesh Forest Department </a></p>
+      <ion-note item-end>
+        2 weeks, 3 days ago
+      </ion-note>
+    </ion-item>
+
+     <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/avatar-han.png" />
+      </ion-avatar>
+      <h2><a href="">Nayeem</a></h2>
+      <h3>Pushed a new document for approval</h3>
+      <p><a href="">3D CUET Web Scene</a></p>
+      <ion-note item-end>
+        2 weeks, 2 days ago
+      </ion-note>
+    </ion-item>
+
+     <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/avatar-han.png" />
+      </ion-avatar>
+      <h2><a href="">Jahangir</a></h2>
+      <h3>Commented on </h3>
+     <p>your layer</p>
+      <ion-note item-end>
+        1 weeks, 2 days ago
+      </ion-note>
+    </ion-item>
+
+       <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/avatar-han.png" />
+      </ion-avatar>
+      <h2><a href="">Monir</a></h2>
+      <h3>Requested to download</h3>
+      <p><a href="">Rudro resource</a></p>
+      <ion-note item-end>
+        1 weeks, 1 days ago
+      </ion-note>
+    </ion-item>
+
+
+
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite($event))" enabled="false">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

@@ -1,5 +1,5 @@
 page-home {
-    body{background: red;}
+   
     .item_count {
         font-weight: bold
     }
@@ -12,12 +12,17 @@ page-home {
     h2 {
         text-align: center
     }
-ion-app.md
-{
-background-color: #d42424;
-}
+
 .content-md
 {
-    background-color: #d42424;
+    background-color: #f4f4f7;
 }
+
+.active
+{
+    background-color: #000;
+}
+
+
+
 }

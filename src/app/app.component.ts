@@ -15,8 +15,8 @@ import { LoginPage } from "../pages/login/login";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
-  // rootPage: any = HomePage;
+  // rootPage: any = LoginPage;
+  rootPage: any = HomePage;
   // rootPage: any = ErrorsPage;
   // rootPage: any = NotificationsPage;
   
@@ -34,11 +34,11 @@ export class MyApp {
 
   private menuInitialization() {
     this.pages = [
-      { title: 'Home', component: HomePage, icon: "assets/icon/favicon.ico", isActive: true},
-      { title: 'Notifications', component: NotificationsPage, icon: "assets/icon/favicon.ico", isActive: false },
-      { title: 'Errors', component: ErrorsPage, icon: "assets/icon/favicon.ico", isActive: false },
-      { title: 'Maps', component: MapsPage, icon: "assets/icon/favicon.ico", isActive: false },
-      { title: 'Logout', component: LogoutPage, icon: "assets/icon/favicon.ico", isActive: false },
+      { title: 'Home', component: HomePage, icon: "home", isActive: true},
+      { title: 'Notifications', component: NotificationsPage, icon: "notifications", isActive: false },
+      { title: 'Errors', component: ErrorsPage, icon: "alert", isActive: false },
+      { title: 'Maps', component: MapsPage, icon: "map", isActive: false },
+      { title: 'Logout', component: LogoutPage, icon: "log-out", isActive: false },
     ];
   }
 
