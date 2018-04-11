@@ -14,7 +14,7 @@
   <ion-list [virtualScroll]="errors">
 
     <ion-item *virtualItem="let item">
-        <ion-icon name="alert" item-start style="color: #f78b00;"></ion-icon>
+        <!--<ion-icon name="alert" item-start style="color: #f78b00;"></ion-icon>-->
       <div full (click)="gotoItemDetailsPage(item)">
         <h2>{{item.msg}}</h2>
         <p class="time">{{item.create_datetime}}</p>

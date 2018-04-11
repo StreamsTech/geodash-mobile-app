@@ -22,6 +22,7 @@ import { OneSignal } from '@ionic-native/onesignal';
 import { MapsPage } from '../pages/maps/maps';
 import { MapsnativePage } from '../pages/mapsnative/mapsnative';
 import { MapwithgooglePage } from '../pages/mapwithgoogle/mapwithgoogle';
+import { ApprovePage } from "../pages/approve/approve";
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { MapwithgooglePage } from '../pages/mapwithgoogle/mapwithgoogle';
     DetailsPage,
     MapsPage,
     MapsnativePage,
-    MapwithgooglePage
+    MapwithgooglePage,
+    ApprovePage
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,9 @@ import { MapwithgooglePage } from '../pages/mapwithgoogle/mapwithgoogle';
     DetailsPage,
     MapsPage,
     MapsnativePage,
-    MapwithgooglePage
+    MapwithgooglePage,
+    ApprovePage
+    
   ],
   providers: [
     StatusBar,

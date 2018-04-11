@@ -8,6 +8,7 @@ import { ErrorsPage } from '../pages/errors/errors';
 import { LogoutPage } from '../pages/logout/logout';
 import { MapsPage } from '../pages/maps/maps';
 import { LoginPage } from "../pages/login/login";
+import { ApprovePage } from "../pages/approve/approve";
 
 @Component({
   templateUrl: 'app.html'
@@ -19,6 +20,7 @@ export class MyApp {
   rootPage: any = HomePage;
   // rootPage: any = ErrorsPage;
   // rootPage: any = NotificationsPage;
+  // rootPage: any = ApprovePages;
   
 
   // rootPage:any = MapsPage;
@@ -38,6 +40,7 @@ export class MyApp {
       { title: 'Notifications', component: NotificationsPage, icon: "notifications", isActive: false },
       { title: 'Errors', component: ErrorsPage, icon: "alert", isActive: false },
       { title: 'Maps', component: MapsPage, icon: "map", isActive: false },
+      { title: 'Approve', component: ApprovePage, icon: "checkmark-circle", isActive: false },
       { title: 'Logout', component: LogoutPage, icon: "log-out", isActive: false },
     ];
   }
