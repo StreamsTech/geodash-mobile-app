@@ -15,7 +15,7 @@ export class HttpHelperService {
 
     }
 
-    getData(url, decorateDate = false) {
+    getData(url, objectMapper:string, decorateDate = false) {
         let items = [];
         return new Promise(resolve => {
             this.tokenService.getTokens().then((header: any) => {
@@ -25,7 +25,7 @@ export class HttpHelperService {
                     },
                 })
                     .subscribe(data => {
-                        var result = JSON.parse(JSON.stringify(data)).objects;
+                        var result = data[objectMapper];
                         let date = new Date().getTime();
                         if (decorateDate) {
                             this.decorateDateObject(result, date);
@@ -46,7 +46,7 @@ export class HttpHelperService {
         })
     }
 
-    private decorateDateObject(result: any, date: number) {
+    private decorateDateObject(result: any[], date: number) {
         for (let item of result) {
             let itemDate = new Date(item.date).getTime();
             let timeDiffrence: number = date - itemDate;
