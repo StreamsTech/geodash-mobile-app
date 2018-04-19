@@ -1,25 +1,46 @@
+import { DocumentService } from './../../services/DocumentService';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ToastController, LoadingController } from 'ionic-angular';
+import { ConstantService } from '../../services/ConstantService';
 
-/**
- * Generated class for the DocumentPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
-@IonicPage()
 @Component({
   selector: 'page-document',
   templateUrl: 'document.html',
 })
 export class DocumentPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  documents: any[];
+  count: any;
+  constructor(private service: DocumentService,
+    private toastCtrl: ToastController,
+    private constantService: ConstantService,
+    private loadingCtrl: LoadingController) {
+    this.documents = [];
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DocumentPage');
+    var loading = this.loadingCtrl.create({
+      content: "Fetchiing data..."
+    });
+    loading.present();
+    this.service.getDocuments().then(data => {
+      this.documents = data;
+      this.count = this.service.count;
+      loading.dismiss();
+    }).catch(() => {
+      loading.dismiss();
+    })
+  }
+
+  approve(item: any) {
+    this.service.approve(item);
+    this.constantService.removeItemFromList(this.documents, item);
+    this.constantService.displayToast("Approved");
+  }
+
+  deny(item: any) {
+    this.service.deny(item);
+    this.constantService.displayToast("Denied");
+    this.constantService.removeItemFromList(this.documents, item);
   }
 
 }

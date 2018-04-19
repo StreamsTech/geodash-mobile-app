@@ -1,3 +1,5 @@
+import { DocumentService } from './../services/DocumentService';
+import { LayersService } from './../services/LayersService';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -9,7 +11,6 @@ import { HomePage } from '../pages/home/home';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
-import { NotificationsPage } from '../pages/notifications/notifications';
 import { NotificationService } from '../services/NotificationService';
 import { ErrorsPage } from '../pages/errors/errors';
 import { LogoutPage } from '../pages/logout/logout';
@@ -26,6 +27,9 @@ import { ApprovePage } from "../pages/approve/approve";
 import { LayerPage } from "../pages/layer/layer";
 import { MapPage } from "../pages/map/map";
 import { DocumentPage } from "../pages/document/document";
+import { ConstantService } from '../services/ConstantService';
+import { MapService } from '../services/MapService';
+import { ApproveDenyService } from '../services/ApproveDenyService';
 
 
 @NgModule({
@@ -33,7 +37,6 @@ import { DocumentPage } from "../pages/document/document";
     MyApp,
     HomePage,
     LoginPage,
-    NotificationsPage,
     LogoutPage,
     ErrorsPage,
     DetailsPage,
@@ -57,7 +60,6 @@ import { DocumentPage } from "../pages/document/document";
     MyApp,
     HomePage,
     LoginPage,
-    NotificationsPage,
     LogoutPage,
     ErrorsPage,
     DetailsPage,
@@ -80,7 +82,13 @@ import { DocumentPage } from "../pages/document/document";
     HttpHelperService,
     TokenAuthenticationService,
     ErrorService,
-    OneSignal
+    OneSignal,
+    ConstantService,
+    LayersService,
+    DocumentService,
+    Storage,
+    MapService,
+    ApproveDenyService
   ]
 })
 export class AppModule { }

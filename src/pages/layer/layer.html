@@ -1,95 +1,36 @@
 <ion-content>
 
   <ion-list>
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let item of service.layers">
       <ion-item>
-
-        <h2><a href="">Sherpur District</a></h2>
-        <h3><span style="color: #353535;font-weight:bold">Organization:</span> Streamstech</h3>
-        <p><span style="color: #353535;font-weight:bold">Tried</span>
-          <ion-badge color="secondary">5</ion-badge>
+        <h2>
+          <a href="">{{item.title}}</a>
+        </h2>
+        <h3>
+          <span style="color: #353535;font-weight:bold">Organization:</span> {{item.group}}</h3>
+        <p>
+          <span style="color: #353535;font-weight:bold">Tried</span>
+          <ion-badge color="secondary">{{item.current_iteration}}</ion-badge>
         </p>
-
-
         <ion-note item-end>
-          <span style="color: #ccc;">Date of request</span><br/> Apr 09 2017 07:03:52
+          <span style="color: #ccc;">Date of request</span>
+          <br/> {{item.date_updated}}
         </ion-note>
       </ion-item>
       <ion-item-options side="left">
 
-        <button ion-button color="secondary">
-        <ion-icon name="md-checkmark"></ion-icon>
-        Approve
-      </button>
+        <button ion-button color="secondary" (click) = "approveLayer(item)">
+          <ion-icon name="md-checkmark"></ion-icon>
+          Approve
+        </button>
       </ion-item-options>
       <ion-item-options side="right">
-        <button ion-button color="danger">
-        <ion-icon name="md-close"></ion-icon>
-        Deny
-      </button>
+        <button ion-button color="danger" (click) = "denyLayer(item)">
+          <ion-icon name="md-close"></ion-icon>
+          Deny
+        </button>
       </ion-item-options>
     </ion-item-sliding>
-
-
-    <ion-item-sliding>
-      <ion-item>
-
-        <h2><a href="">Sherpur District</a></h2>
-        <h3><span style="color: #353535;font-weight:bold">Organization:</span> Streamstech</h3>
-        <p><span style="color: #353535;font-weight:bold">Tried</span>
-          <ion-badge color="secondary">2</ion-badge>
-        </p>
-
-
-        <ion-note item-end>
-          <span style="color: #ccc;">Date of request</span><br/> Apr 09 2017 07:03:52
-        </ion-note>
-      </ion-item>
-      <ion-item-options side="left">
-
-        <button ion-button color="secondary">
-        <ion-icon name="md-checkmark"></ion-icon>
-        Approve
-      </button>
-      </ion-item-options>
-      <ion-item-options side="right">
-        <button ion-button color="danger">
-        <ion-icon name="md-close"></ion-icon>
-        Deny
-      </button>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <ion-item-sliding>
-      <ion-item>
-
-        <h2><a href="">Sherpur District</a></h2>
-        <h3><span style="color: #353535;font-weight:bold">Organization:</span> Streamstech</h3>
-        <p><span style="color: #353535;font-weight:bold">Tried</span>
-          <ion-badge color="secondary">1</ion-badge>
-        </p>
-
-
-        <ion-note item-end>
-          <span style="color: #ccc;">Date of request</span><br/> Apr 09 2017 07:03:52
-        </ion-note>
-      </ion-item>
-      <ion-item-options side="left">
-
-        <button ion-button color="secondary">
-        <ion-icon name="md-checkmark"></ion-icon>
-        Approve
-      </button>
-      </ion-item-options>
-      <ion-item-options side="right">
-        <button ion-button color="danger">
-        <ion-icon name="md-close"></ion-icon>
-        Deny
-      </button>
-      </ion-item-options>
-    </ion-item-sliding>
-
-
 
   </ion-list>
 

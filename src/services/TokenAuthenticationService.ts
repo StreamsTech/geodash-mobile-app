@@ -3,12 +3,14 @@ import { Storage } from '@ionic/storage';
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { HttpHelperService } from "./HttpHelperService";
+import { ConstantService } from "./ConstantService";
 
 @Injectable()
 export class TokenAuthenticationService {
 
     constructor(private storage: Storage,
         private http: HttpClient,
+        private constantService: ConstantService
     ) { }
     public clearToken() {
         this.storage.clear();
@@ -18,7 +20,7 @@ export class TokenAuthenticationService {
             this.storage.get("token").then(loginData => {
                 console.log("get data from renew() " + JSON.stringify(loginData));
 
-                this.http.get('http://172.16.0.237:8000/api/access-token/',
+                this.http.get(this.constantService.getAPIRoot() + 'api/access-token/',
                     {
                         headers: { 'user': loginData.username, 'password': loginData.password }
                     })
@@ -46,7 +48,11 @@ export class TokenAuthenticationService {
     public getTokens() {
         return new Promise((resolve) => {
             this.storage.get("token").then(data => {
-                resolve('Bearer ' + data.token);
+                if (data) {
+                    resolve('Bearer ' + data.token);
+                } else {
+                    resolve(false);
+                }
             })
         })
     }
@@ -59,5 +65,19 @@ export class TokenAuthenticationService {
             }
             resolve(false);
         });
+    }
+
+    public getAuthenticationHeader(): Promise<any> {
+        return new Promise((resolve) => {
+            this.getTokens().then((data: any) => {
+                let header = "";
+                header = 'Bearer ' + data;
+
+                resolve(header);
+                console.log("header");
+                console.log(JSON.stringify(header));
+                return header;
+            })
+        })
     }
 }

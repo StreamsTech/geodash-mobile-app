@@ -16,14 +16,7 @@ import { ApprovePage } from "../pages/approve/approve";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  // rootPage: any = LoginPage;
   rootPage: any = HomePage;
-  // rootPage: any = ErrorsPage;
-  // rootPage: any = NotificationsPage;
-  // rootPage: any = ApprovePages;
-  
-
-  // rootPage:any = MapsPage;
 
   pages: Array<{ title: string, component: any, icon: any, isActive: boolean }>;
 
@@ -37,7 +30,6 @@ export class MyApp {
   private menuInitialization() {
     this.pages = [
       { title: 'Home', component: HomePage, icon: "home", isActive: true},
-      { title: 'Notifications', component: NotificationsPage, icon: "notifications", isActive: false },
       { title: 'Errors', component: ErrorsPage, icon: "alert", isActive: false },
       { title: 'Maps', component: MapsPage, icon: "map", isActive: false },
       { title: 'Approval Request', component: ApprovePage, icon: "checkmark-circle", isActive: false },

@@ -1,5 +1,24 @@
 page-home {
-   
+    .time {
+        font-size: small;
+        color: #8a99a5;
+    }
+    .item-md {
+        padding-left: 0;
+    }
+    .item-md.item-block .item-inner {
+        padding-right: 0;
+    }
+    .note-md {
+        font-size: 11px;
+        color: #1ab394;
+    }
+    .item-md [item-end] {
+        margin: -45px 0 0 0;
+    }
+    .item-md p a {
+        color: #7f7f7f;
+    }
     .item_count {
         font-weight: bold
     }
@@ -10,19 +29,14 @@ page-home {
         color: red;
     }
     h2 {
-        text-align: center
+        text-align: left;
+        color: #05ace2;
+        font-weight: bold!important;
     }
-
-.content-md
-{
-    background-color: #f4f4f7;
-}
-
-.active
-{
-    background-color: #000;
-}
-
-
-
+    .content-md {
+        background-color: #f4f4f7;
+    }
+    .active {
+        background-color: #000;
+    }
 }
