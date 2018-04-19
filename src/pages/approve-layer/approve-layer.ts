@@ -4,16 +4,14 @@ import { Component } from '@angular/core';
 import { ToastController, LoadingController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-layer',
-  templateUrl: 'layer.html',
+  selector: 'approve-page-layer',
+  templateUrl: 'approve-layer.html',
 })
-export class LayerPage {
-  layers: any[];
+export class ApproveLayerPage {
   constructor(private service: LayersService,
     private toastCtrl: ToastController,
     private constantService: ConstantService,
     private loadingCtrl: LoadingController) {
-    this.layers = [];
   }
 
   ionViewDidLoad() {
@@ -22,7 +20,6 @@ export class LayerPage {
     });
     loading.present();
     this.service.getLayers().then(data => {
-      this.layers = data;
       loading.dismiss();
     }).catch(() => {
       loading.dismiss();
@@ -31,13 +28,11 @@ export class LayerPage {
 
   approveLayer(item: any) {
     this.service.approve(item);
-    this.layers = this.constantService.removeItemFromList(this.layers, item);
     this.displayToast("Approved");
   }
 
   denyLayer(item: any) {
     this.service.deny(item)
-    this.layers = this.constantService.removeItemFromList(this.layers, item);
     this.displayToast("Denied");
   }
 

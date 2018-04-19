@@ -15,11 +15,11 @@ export class ApproveDenyService {
     }
 
     approve(resource_pk, resource_type): any {
-        return this.callAPI(resource_pk, resource_type, "approve");
+        return this.callAPI(resource_pk, resource_type, "approved");
     }
 
     deny(resource_pk, resource_type): any {
-        return this.callAPI(resource_pk, resource_type, "deny")
+        return this.callAPI(resource_pk, resource_type, "denied")
     }
 
     private callAPI(resource_pk, resource_type, action): any {
@@ -51,7 +51,7 @@ export class ApproveDenyService {
         return {
             "resource_type": resource_type,
             "resource_pk": resource_pk,
-            "comment": "i approved this map",
+            "comment": `i approved this ${resource_type}`,
             "comment_subject": "approve comment",
             "action": action,
             "view_permission": "Yes",

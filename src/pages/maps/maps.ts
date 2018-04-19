@@ -229,7 +229,7 @@ function getIconStyle() {
         anchorXUnits: 'pixels',
         anchorYUnits: 'pixels',
         opacity: 0.75,
-        src: 'marker.png',
+        src: 'assets/marker.png',
         size: [50, 50]
     })
 }

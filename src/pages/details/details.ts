@@ -13,8 +13,4 @@ export class DetailsPage {
 
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DetailsPage');
-  }
-
 }

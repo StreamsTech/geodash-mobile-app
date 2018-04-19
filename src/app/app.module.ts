@@ -24,9 +24,9 @@ import { MapsPage } from '../pages/maps/maps';
 import { MapsnativePage } from '../pages/mapsnative/mapsnative';
 import { MapwithgooglePage } from '../pages/mapwithgoogle/mapwithgoogle';
 import { ApprovePage } from "../pages/approve/approve";
-import { LayerPage } from "../pages/layer/layer";
-import { MapPage } from "../pages/map/map";
-import { DocumentPage } from "../pages/document/document";
+import { ApproveLayerPage } from "../pages/approve-layer/approve-layer";
+import { ApproveMapPage } from "../pages/approve-map/approve-map";
+import { ApproveDocumentPage } from "../pages/approve-document/approve-document";
 import { ConstantService } from '../services/ConstantService';
 import { MapService } from '../services/MapService';
 import { ApproveDenyService } from '../services/ApproveDenyService';
@@ -44,9 +44,9 @@ import { ApproveDenyService } from '../services/ApproveDenyService';
     MapsnativePage,
     MapwithgooglePage,
     ApprovePage,
-    MapPage,
-    LayerPage,
-    DocumentPage
+    ApproveMapPage,
+    ApproveLayerPage,
+    ApproveDocumentPage
   ],
   imports: [
     BrowserModule,
@@ -67,9 +67,9 @@ import { ApproveDenyService } from '../services/ApproveDenyService';
     MapsnativePage,
     MapwithgooglePage,
     ApprovePage,
-    MapPage,
-    LayerPage,
-    DocumentPage
+    ApproveMapPage,
+    ApproveLayerPage,
+    ApproveDocumentPage
     
   ],
   providers: [
@@ -86,7 +86,6 @@ import { ApproveDenyService } from '../services/ApproveDenyService';
     ConstantService,
     LayersService,
     DocumentService,
-    Storage,
     MapService,
     ApproveDenyService
   ]

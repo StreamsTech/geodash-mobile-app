@@ -1,3 +1,4 @@
+import { HttpHelperService } from './HttpHelperService';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Injectable } from "@angular/core";
 import { Notification } from "../core/notification";
@@ -12,46 +13,22 @@ import { ApproveDenyService } from "./ApproveDenyService";
 
 @Injectable()
 export class LayersService {
-    public layers: any[]=[];
+    public layers: any=[];
     public count: number;
 
     constructor(private http: HttpClient,
         private constantService: ConstantService,
         private tokenService: TokenAuthenticationService,
+        private httpHelper: HttpHelperService,
         private approveDenyAPI: ApproveDenyService
     ) {
         this.layers = [];
     }
 
     getLayers(): Promise<any> {
-        return new Promise(resolve => {
-            if (this.layers.length === 0) {
-                this.tokenService.getTokens().then((header: any) => {
-                    this.http.get(this.constantService.getAPIRoot() + "workspace_layer_api/?user_type=admin&resource_state=user_approval_request_list", {
-                        headers: {
-                            'Authorization': header
-                        },
-                    })
-                        .subscribe(data => {
-                            this.count = JSON.parse(JSON.stringify(data)).meta.total_count;
-                            var result = JSON.parse(JSON.stringify(data)).objects;
-                            if (this.constantService.isResultEmpty(result)) {
-                                resolve(this.layers);
-                                return;
-                            }
-                            this.layers = result;
-                            resolve(this.layers);
-                            return;
-                        }, error => {
-                            resolve(this.layers);
-                            return;
-                        })
-
-                })
-            } else {
-                resolve(this.layers);
-                return;
-            }
+        const url ="workspace_layer_api/?user_type=admin&resource_state=user_approval_request_list";
+        return this.httpHelper.getData(url, "objects", false).then(data=>{
+            this.layers=data;
         })
 
     }

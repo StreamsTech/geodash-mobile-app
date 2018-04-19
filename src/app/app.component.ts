@@ -3,7 +3,6 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
-import { NotificationsPage } from '../pages/notifications/notifications';
 import { ErrorsPage } from '../pages/errors/errors';
 import { LogoutPage } from '../pages/logout/logout';
 import { MapsPage } from '../pages/maps/maps';
@@ -18,7 +17,7 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{ title: string, component: any, icon: any, isActive: boolean }>;
+  pages: Array<{ title: string, component: any, icon: any, isActive: boolean, isLogOut?: boolean }>;
 
   constructor(public platform: Platform,
     public statusBar: StatusBar,
@@ -33,7 +32,7 @@ export class MyApp {
       { title: 'Errors', component: ErrorsPage, icon: "alert", isActive: false },
       { title: 'Maps', component: MapsPage, icon: "map", isActive: false },
       { title: 'Approval Request', component: ApprovePage, icon: "checkmark-circle", isActive: false },
-      { title: 'Logout', component: LogoutPage, icon: "log-out", isActive: false },
+      { title: 'Logout', component: LogoutPage, icon: "log-out", isActive: false, isLogOut: true },
     ];
   }
 

@@ -4,17 +4,15 @@ import { ToastController, LoadingController } from 'ionic-angular';
 import { ConstantService } from '../../services/ConstantService';
 
 @Component({
-  selector: 'page-document',
-  templateUrl: 'document.html',
+  selector: 'page-approve-document',
+  templateUrl: 'approve-document.html',
 })
-export class DocumentPage {
-  documents: any[];
-  count: any;
+export class ApproveDocumentPage {
+  
   constructor(private service: DocumentService,
     private toastCtrl: ToastController,
     private constantService: ConstantService,
     private loadingCtrl: LoadingController) {
-    this.documents = [];
   }
 
   ionViewDidLoad() {
@@ -23,8 +21,6 @@ export class DocumentPage {
     });
     loading.present();
     this.service.getDocuments().then(data => {
-      this.documents = data;
-      this.count = this.service.count;
       loading.dismiss();
     }).catch(() => {
       loading.dismiss();
@@ -33,14 +29,12 @@ export class DocumentPage {
 
   approve(item: any) {
     this.service.approve(item);
-    this.constantService.removeItemFromList(this.documents, item);
     this.constantService.displayToast("Approved");
   }
 
   deny(item: any) {
     this.service.deny(item);
     this.constantService.displayToast("Denied");
-    this.constantService.removeItemFromList(this.documents, item);
   }
 
 }

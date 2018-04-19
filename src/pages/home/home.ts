@@ -29,7 +29,6 @@ export class HomePage {
       content: "Fetchiing data..."
     });
     loading.present();
-    // this.service.getNotifications(this.offset, this.limit);
     this.service.getNotifications(this.offset, this.limit).then(data => {
       this.notifications = data;
       this.count = this.service.getNotificationCount();

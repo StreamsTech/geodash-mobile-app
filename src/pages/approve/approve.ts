@@ -2,9 +2,9 @@ import { MapService } from './../../services/MapService';
 import { DocumentService } from './../../services/DocumentService';
 import { LayersService } from './../../services/LayersService';
 import { Component } from '@angular/core';
-import { LayerPage } from "../layer/layer";
-import { DocumentPage } from "../document/document";
-import { MapPage } from "../map/map";
+import { ApproveLayerPage } from "../approve-layer/approve-layer";
+import { ApproveDocumentPage } from "../approve-document/approve-document";
+import { ApproveMapPage } from "../approve-map/approve-map";
 
 /**
  * Generated class for the ApprovePage page.
@@ -30,9 +30,9 @@ export class ApprovePage {
     public documentService: DocumentService,
     public mapService: MapService) {
 
-    this.layerPage = LayerPage;
-    this.documentPage = DocumentPage;
-    this.mapPage = MapPage;
+    this.layerPage = ApproveLayerPage;
+    this.documentPage = ApproveDocumentPage;
+    this.mapPage = ApproveMapPage;
   }
 
   ngOnInit() {

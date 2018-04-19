@@ -1,11 +1,11 @@
 <ion-content>
 
   <ion-list>
-    <ion-item-sliding *ngFor="let item of documents">
+    <ion-item-sliding *ngFor="let item of service.maps">
       <ion-item>
 
         <h2>
-          <a href="">{{item.title}}</a>
+          {{item.title}}
         </h2>
         <h3>
           <span style="color: #353535;font-weight:bold">Organization:</span> {{item.group}}</h3>
@@ -22,13 +22,13 @@
       </ion-item>
       <ion-item-options side="left">
 
-        <button ion-button color="secondary" (click) = "approve(item)">
+        <button ion-button color="secondary" (click)="approve(item)">
           <ion-icon name="md-checkmark"></ion-icon>
           Approve
         </button>
       </ion-item-options>
       <ion-item-options side="right">
-        <button ion-button color="danger" (click) = "deny(item)">
+        <button ion-button color="danger" (click)="deny(item)">
           <ion-icon name="md-close"></ion-icon>
           Deny
         </button>

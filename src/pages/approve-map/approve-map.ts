@@ -10,16 +10,14 @@ import { IonicPage, NavController, NavParams, ToastController, LoadingController
  */
 
 @Component({
-  selector: 'page-map',
-  templateUrl: 'map.html',
+  selector: 'approve-page-map',
+  templateUrl: 'approve-map.html',
 })
-export class MapPage {
+export class ApproveMapPage {
 
-  maps: any[];
   constructor(private service: MapService,
     private toastCtrl: ToastController,
     private loadingCtrl: LoadingController) {
-    this.maps = [];
   }
 
   ionViewDidLoad() {
@@ -28,36 +26,21 @@ export class MapPage {
     });
     loading.present();
     this.service.getMaps().then(data => {
-      this.maps = data;
       loading.dismiss();
     }).catch(() => {
       loading.dismiss();
     })
   }
 
-  approveNotfication(item: any) {
-    // this.setActionToFalFse(item);
-    this.service.approveMap(item);
-    this.removeItemFromNotifications(item);
+  approve(item: any) {
+    this.service.approve(item);
     this.displayToast("Approved");
   }
 
-  private removeItemFromNotifications(item: any) {
-    var index = this.maps.indexOf(item, 0);
-    if (index > -1) {
-      this.maps.splice(index, 1);
-    }
-  }
 
-  // private setActionToFalse(item: Notification) {
-  //   this.layers.find(n => n.id == item.id).hasAction = false;
-  // }
-
-  denyNotfication(item: any) {
-    // this.setActionToFalse(item);
-    this.service.denyNotification(item);
+  deny(item: any) {
+    this.service.deny(item);
     this.displayToast("Denied");
-    this.removeItemFromNotifications(item);
   }
 
   private displayToast(message, duration: number = 3000) {
