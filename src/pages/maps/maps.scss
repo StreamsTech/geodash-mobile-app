@@ -6,5 +6,10 @@ page-maps {
     .hidden {
         display: none;
     }
-
+    .button-md {
+        position: absolute;
+        bottom: 10px;
+        z-index: 100;
+        left: 10px;
+    }
 }
