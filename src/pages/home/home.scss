@@ -39,4 +39,11 @@ page-home {
     .active {
         background-color: #000;
     }
+    .item-md ion-avatar ion-img, .item-md ion-avatar img
+    {
+        border-radius: 0 !important;
+        border: 1px solid #ccc;
+        width: 60px;
+        height: 60px;
+    }
 }
