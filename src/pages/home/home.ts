@@ -26,7 +26,7 @@ export class HomePage {
 
   ionViewDidLoad() {
     var loading = this.loadingCtrl.create({
-      content: "Fetchiing data..."
+      content: "Fetching data..."
     });
     loading.present();
     this.service.getNotifications(this.offset, this.limit).then(data => {

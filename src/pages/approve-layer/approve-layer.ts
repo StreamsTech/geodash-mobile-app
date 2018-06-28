@@ -16,7 +16,7 @@ export class ApproveLayerPage {
 
   ionViewDidLoad() {
     var loading = this.loadingCtrl.create({
-      content: "Fetchiing data..."
+      content: "Fetching data..."
     });
     loading.present();
     this.service.getLayers().then(data => {

@@ -22,7 +22,7 @@ export class ApproveMapPage {
 
   ionViewDidLoad() {
     var loading = this.loadingCtrl.create({
-      content: "Fetchiing data..."
+      content: "Fetching data..."
     });
     loading.present();
     this.service.getMaps().then(data => {

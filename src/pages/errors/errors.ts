@@ -21,7 +21,7 @@ export class ErrorsPage {
 
   ionViewDidLoad() {
     var loading = this.laodingCtrl.create({
-      content: 'Fetchiing data...'
+      content: 'Fetching data...'
     })
     loading.present();
     this.service.getErrors(this.offset).then(data => {
