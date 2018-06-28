@@ -21,8 +21,6 @@ import { DetailsPage } from '../pages/details/details';
 import { ErrorService } from '../services/ErrorService';
 import { OneSignal } from '@ionic-native/onesignal';
 import { MapsPage } from '../pages/maps/maps';
-import { MapsnativePage } from '../pages/mapsnative/mapsnative';
-import { MapwithgooglePage } from '../pages/mapwithgoogle/mapwithgoogle';
 import { ApprovePage } from "../pages/approve/approve";
 import { ApproveLayerPage } from "../pages/approve-layer/approve-layer";
 import { ApproveMapPage } from "../pages/approve-map/approve-map";
@@ -41,8 +39,6 @@ import { ApproveDenyService } from '../services/ApproveDenyService';
     ErrorsPage,
     DetailsPage,
     MapsPage,
-    MapsnativePage,
-    MapwithgooglePage,
     ApprovePage,
     ApproveMapPage,
     ApproveLayerPage,
@@ -64,8 +60,6 @@ import { ApproveDenyService } from '../services/ApproveDenyService';
     ErrorsPage,
     DetailsPage,
     MapsPage,
-    MapsnativePage,
-    MapwithgooglePage,
     ApprovePage,
     ApproveMapPage,
     ApproveLayerPage,
