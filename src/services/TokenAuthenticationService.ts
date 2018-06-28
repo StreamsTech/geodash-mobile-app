@@ -62,8 +62,10 @@ export class TokenAuthenticationService {
             if (data) {
                 resolve(true);
                 return;
+            }else{
+                resolve(false);
+                return;
             }
-            resolve(false);
         });
     }
 
