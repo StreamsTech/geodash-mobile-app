@@ -1,4 +1,6 @@
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore geodash-release-key.jks android-release-unsigned.apk geodash
+xcopy android-release-unsigned.apk C:\Users\streamstech\AppData\Local\Android\Sdk\build-tools\28.0.0
 cd C:\Users\streamstech\AppData\Local\Android\Sdk\build-tools\28.0.0
+del geodash.apk
 zipalign -v 4 android-release-unsigned.apk geodash.apk
 apksigner verify geodash.apk
