@@ -24,6 +24,9 @@ export class MyApp {
     public splashScreen: SplashScreen, ) {
     this.initializeApp();
     this.menuInitialization();
+    this.platform.ready().then(()=>{
+      this.splashScreen.hide();
+    })
   }
 
   private menuInitialization() {
@@ -36,10 +39,13 @@ export class MyApp {
     ];
   }
 
+  ionViewDidLoad (){
+    // this.splashScreen.hide();
+  }
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      // this.splashScreen.hide();
 
     });
   }
