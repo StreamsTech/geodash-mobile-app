@@ -12,7 +12,7 @@ export class ConstantService {
     constructor(private toastCtrl: ToastController) {
     }
     public getAPIRoot() {
-        return 'http://geodash.streamstech.com/api/';
+        return 'https://geodash.gov.bd/api/';
     }
 
     removeItemFromList(list: any[], item: any) {
