@@ -12,10 +12,11 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-.menu-inner .content-md {
+.menu-inner .content-md, .menu-inner ion-content, ion-menu button.item-ios {
     background: #2c3842;
+    color: white;
 }
-
+ion-menu ion-content{background: #2c3842;}
 .menu-inner .item-md {
     background: #2c3842;
     color: #fff;

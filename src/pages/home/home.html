@@ -13,7 +13,7 @@
 
     <ion-list-header style="margin-bottom: 0">
 
-      <ion-icon name="notifications" item-start style="color: #05ace2;margin-left: 15px;margin-right:-15px;"></ion-icon>
+      <ion-icon name="notifications" item-start style="color: #05ace2;margin-left: 15px;margin-right:0px;"></ion-icon>
       {{notifications.length}} new notifications
 
     </ion-list-header>
@@ -25,7 +25,7 @@
   </ion-list>
 
   <ion-content overflow-scroll="true">
-    <div *ngIf="notifications.length==0">
+    <div style="padding: 10px;" *ngIf="notifications.length==0">
       No notifications available
     </div>
     <ion-list [virtualScroll]="notifications">
