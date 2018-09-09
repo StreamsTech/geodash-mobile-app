@@ -14,13 +14,14 @@ page-login {
         margin: 0 auto;
     }
     ion-content {
-        // background-image: url(../assets/imgs/bodyBackImg.jpg);  
-   
+        // background-image: url(../assets/imgs/bodyBackImg.jpg);
+
     }
+    ion-content.login{background: #2b99ce}
 
 .content-md
 {
-    background-color: #2b99ce;   
+    background-color: #2b99ce;
 }
 .item-md
 {
@@ -51,6 +52,6 @@ page-login {
 {
     color: #fff;
 }
-  
-  
+
+
 }
