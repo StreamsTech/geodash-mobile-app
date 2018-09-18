@@ -14,11 +14,7 @@ export class NotificationService {
     private notifications: any[];
     private totalNotification: number;
 
-    constructor(private http: HttpClient,
-        private httpHelper: HttpHelperService,
-        private constantService: ConstantService,
-        private tokenService: TokenAuthenticationService
-    ) {
+    constructor(private httpHelper: HttpHelperService) {
         this.notifications = [];
     }
 

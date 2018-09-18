@@ -7,8 +7,7 @@ import { ConstantService } from "./ConstantService";
 
 @Injectable()
 export class LoginService {
-    constructor(private storage: Storage,
-        private http: HttpClient,
+    constructor(private http: HttpClient,
         private constantService: ConstantService,
         private authenticationService: TokenAuthenticationService) {
     }

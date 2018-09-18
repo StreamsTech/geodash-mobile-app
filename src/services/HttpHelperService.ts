@@ -8,14 +8,13 @@ import { Storage } from '@ionic/storage';
 
 @Injectable()
 export class HttpHelperService {
-    constructor(
-        private tokenService: TokenAuthenticationService,
+    constructor(private tokenService: TokenAuthenticationService,
         private constantService: ConstantService,
         private http: HttpClient) {
 
     }
 
-    getData(url, objectMapper:string, decorateDate = false) {
+    getData(url, objectMapper: string, decorateDate = false) {
         let items = [];
         return new Promise(resolve => {
             this.tokenService.getTokens().then((header: any) => {

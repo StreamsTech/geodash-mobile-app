@@ -14,8 +14,7 @@ export class MapService {
     public maps: any = [];
     public count: number;
 
-    constructor(private http: HttpClient,
-        private constantService: ConstantService,
+    constructor(private constantService: ConstantService,
         private httpHelper: HttpHelperService,
         private approveDenyAPI: ApproveDenyService
     ) {

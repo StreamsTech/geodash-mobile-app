@@ -14,9 +14,7 @@ export class DocumentService {
     public documents: any=[];
     public count: number;
 
-    constructor(private http: HttpClient,
-        private constantService: ConstantService,
-        private tokenService: TokenAuthenticationService,
+    constructor(private constantService: ConstantService,
         private httpHelper: HttpHelperService,
         private approveDenyAPI: ApproveDenyService
     ) {
