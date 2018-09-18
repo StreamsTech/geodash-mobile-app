@@ -6,10 +6,10 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'details.html',
 })
 export class DetailsPage {
-  singelError: Error;
+  errorDetail: Error;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.singelError = navParams.get("item");
+    this.errorDetail = navParams.get("item");
 
   }
 

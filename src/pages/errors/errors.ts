@@ -12,6 +12,7 @@ export class ErrorsPage {
 
   errors: Error[];
   offset = 0;
+  offsetLimit = 50;
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private service: ErrorService,
@@ -40,15 +41,13 @@ export class ErrorsPage {
   }
 
   doInfinite(infiniteScroll) {
-    this.offset = this.offset + 50;
+    this.offset = this.offset + this.offsetLimit;
     return new Promise((resolve) => {
       setTimeout(() => {
         this.service.getErrors(this.offset).then(data => {
-
-          var arrLength = data.length;
-          for (var i = 0; i < arrLength; i++) {
-            this.errors.push(data[i]);
-          }
+          data.array.forEach(element => {
+            this.errors.push(element);
+          });
           resolve();
         })
       }, 500);

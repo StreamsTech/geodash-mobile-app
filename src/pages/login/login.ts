@@ -3,7 +3,6 @@ import { NavController, NavParams, AlertController, Header, LoadingController } 
 import { HomePage } from '../home/home';
 import { Login } from '../../core/login';
 import { LoginService } from '../../services/LoginService';
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import { Observable } from "rxjs/Rx"
 
@@ -17,7 +16,6 @@ export class LoginPage {
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private alertCtrl: AlertController,
-    private http: HttpClient,
     private loadingCtrl: LoadingController,
     private loginService: LoginService) {
     this.loginDetails = {

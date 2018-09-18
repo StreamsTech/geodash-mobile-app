@@ -48,10 +48,9 @@ export class HomePage {
             resolve(false);
             return;
           }
-          var arrLength = data.length;
-          for (var i = 0; i < arrLength; i++) {
-            this.notifications.push(data[i]);
-          }
+          data.array.forEach(element => {
+            this.notifications.push(element);
+          });
           resolve();
         })
       } else {

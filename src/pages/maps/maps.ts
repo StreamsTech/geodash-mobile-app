@@ -27,37 +27,6 @@ export class MapsPage {
             else
                 startPointClickedAction(evt);
         });
-
-
-
-        /*
-        var extentBeforeMove = map.getView().calculateExtent(map.getSize());
-        var bottomLeft = ol.proj.transform(ol.extent.getBottomLeft(extentBeforeMove),
-            'EPSG:3857', 'EPSG:4326');
-        var topRight = ol.proj.transform(ol.extent.getTopRight(extentBeforeMove),
-            'EPSG:3857', 'EPSG:4326');
-        console.log(bottomLeft);
-        console.log(topRight);
-
-        function onMoveEnd(evt) {
-            var map = evt.map;
-
-            var extent = map.getView().calculateExtent(map.getSize());
-            console.log(extent);
-            var bottomLeft = ol.proj.transform(ol.extent.getBottomLeft(extent),
-                'EPSG:3857', 'EPSG:4326');
-            var topRight = ol.proj.transform(ol.extent.getTopRight(extent),
-                'EPSG:3857', 'EPSG:4326');
-            console.log(bottomLeft);
-            console.log(topRight);
-            // display('left', wrapLon(bottomLeft[0]));
-            // display('bottom', bottomLeft[1]);
-            // display('right', wrapLon(topRight[0]));
-            // display('top', topRight[1]);
-        }
-
-        map.on('moveend', onMoveEnd);
-        */
     }
 
     displayRoute() {

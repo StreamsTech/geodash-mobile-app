@@ -38,10 +38,7 @@ export class MyApp {
       { title: 'Logout', component: LogoutPage, icon: "log-out", isActive: false, isLogOut: true },
     ];
   }
-
-  ionViewDidLoad (){
-    // this.splashScreen.hide();
-  }
+  
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();

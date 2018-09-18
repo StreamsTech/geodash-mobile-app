@@ -10,7 +10,6 @@ import { ToastController, LoadingController } from 'ionic-angular';
 export class ApproveLayerPage {
   constructor(private service: LayersService,
     private toastCtrl: ToastController,
-    private constantService: ConstantService,
     private loadingCtrl: LoadingController) {
   }
 

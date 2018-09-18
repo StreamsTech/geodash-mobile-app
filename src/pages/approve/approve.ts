@@ -19,10 +19,6 @@ import { ApproveMapPage } from "../approve-map/approve-map";
 })
 export class ApprovePage {
 
-  newLyaers: any;
-  newDocuments: any;
-  newMaps: any;
-
   layerPage: any;
   documentPage: any;
   mapPage: any;
@@ -44,10 +40,6 @@ export class ApprovePage {
 
     this.mapService.getMaps().then(() => {
     })
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ApprovePage');
   }
 
 }
